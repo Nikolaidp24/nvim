@@ -6,6 +6,10 @@ return {
       window = {
         mappings = {
           -- disable fzf
+          ["<C-Left>"] = vim.cmd("wincmd h"),
+          ["<C-Right>"] = vim.cmd("wincmd l"),
+          ["<C-Up>"] = vim.cmd("wincmd k"),
+          ["<C-Down>"] = vim.cmd("wincmd j"),
           ["/"] = "none",
         },
       },
