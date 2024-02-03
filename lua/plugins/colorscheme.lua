@@ -5,7 +5,7 @@ return {
     config = function()
       require("kanagawa").setup({
         transparent = true,
-        -- dimInactive = true,
+        dimInactive = true,
         colors = {
           theme = {
             all = {
