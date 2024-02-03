@@ -6,9 +6,30 @@ return {
       require("kanagawa").setup({
         transparent = true,
         -- dimInactive = true,
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg_gutter = "none",
+              },
+            },
+          },
+        },
+        -- overrides = function()
+        --   return {
+        --     NormalFloat = { bg = "none" },
+        --     FloatBorder = { bg = "none" },
+        --     FloatTitle = { bg = "none" },
+        --   }
+        -- end,
       })
-      require("kanagawa").load("dragon")
-      vim.cmd([[colorscheme kanagawa]])
     end,
+    -- vim.cmd("colorscheme kanagawa-wave"),
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = { "kanagawa-wave" },
+    },
   },
 }

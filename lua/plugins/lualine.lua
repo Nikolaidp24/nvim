@@ -55,6 +55,8 @@ return {
         theme = my_lualine_theme,
       },
       sections = {
+        -- show Copilot's logo and make it bright blue if it's enabled
+        -- and make it dim if it's disabled
         lualine_x = {
           {
             lazy_status.updates,
@@ -64,7 +66,6 @@ return {
           { "encoding" },
           -- { "fileformat" },
           { "branch" },
-          { "buffers" },
           { "diagnostics" },
           { "searchcount" },
           { "filetype" },
