@@ -2,8 +2,8 @@ return {
   {
     "rebelot/kanagawa.nvim",
     priority = 1000,
-    config = function()
-      require("kanagawa").setup({
+    opts = function()
+      return {
         transparent = true,
         -- dimInactive = true,
         colors = {
@@ -22,14 +22,8 @@ return {
         --     FloatTitle = { bg = "none" },
         --   }
         -- end,
-      })
+      }
     end,
     -- vim.cmd("colorscheme kanagawa-wave"),
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = { "kanagawa-wave" },
-    },
   },
 }

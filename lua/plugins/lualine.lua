@@ -12,7 +12,7 @@ return {
       yellow = "#FFDA7B",
       red = "#FF4A4A",
       fg = "#FFFFFF",
-      bg = "#112638",
+      bg = "none",
       inactive_bg = "#2c3043",
     }
 
@@ -55,20 +55,24 @@ return {
         theme = my_lualine_theme,
       },
       sections = {
-        -- show Copilot's logo and make it bright blue if it's enabled
-        -- and make it dim if it's disabled
+        lualine_a = {
+          "mode",
+        },
+        lualine_b = {},
         lualine_x = {
-          {
-            lazy_status.updates,
-            cond = lazy_status.has_updates,
-            color = { fg = "#ff9e64" },
-          },
-          { "encoding" },
+          "copilot",
+          "encoding",
           -- { "fileformat" },
-          { "branch" },
-          { "diagnostics" },
-          { "searchcount" },
-          { "filetype" },
+          "branch",
+          "diagnostics",
+          -- { "searchcount" },
+          "filetype",
+        },
+        lualine_y = {},
+        lualine_z = {
+          function()
+            return " " .. os.date("%R")
+          end,
         },
       },
     })

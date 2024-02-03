@@ -1,1 +1,1 @@
-return { "ofseed/copilot-status.nvim" }
+return { "AndreM222/copilot-lualine" }
