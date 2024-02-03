@@ -59,6 +59,24 @@ return {
           "mode",
         },
         lualine_b = {},
+        lualine_c = {
+          {
+            "filename",
+            file_status = true,
+            path = 1,
+          },
+          {
+            "diff",
+            colored = true,
+            diff_color = {
+              added = { fg = colors.green },
+              modified = { fg = colors.orange },
+              removed = { fg = colors.red },
+            },
+            -- symbols = { added = " ", modified = "󰝤 ", removed = " " },
+            source = nil,
+          },
+        },
         lualine_x = {
           "copilot",
           "encoding",
