@@ -88,7 +88,7 @@ return {
             "filetype",
             icon_only = true,
             separator = "",
-            padding = { left = 1, right = 0 },
+            padding = { left = 1, right = 1 },
           },
           {
             "diff",
@@ -174,7 +174,7 @@ return {
           end,
         },
       },
-      extensions = { "lazy" },
+      extensions = { "nvim-tree", "lazy", "mason", "trouble", "fzf", "toggleterm" },
     }
   end,
 }

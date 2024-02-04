@@ -34,13 +34,13 @@ return {
             MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
 
             --Borderless and transparent floating telescope windows
-            TelescopeTitle = { fg = theme.ui.special, bold = true },
+            TelescopeTitle = { fg = theme.ui.special, bg = "none" },
             TelescopePromptNormal = { bg = "none" },
-            TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
+            TelescopePromptBorder = { fg = "#04D9FF", bg = "none" },
             TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = "none" },
-            TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
+            TelescopeResultsBorder = { fg = "#04D9FF", bg = "none" },
             TelescopePreviewNormal = { bg = "none" },
-            TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+            TelescopePreviewBorder = { bg = "none", fg = "#04D9FF" },
           }
         end,
       }

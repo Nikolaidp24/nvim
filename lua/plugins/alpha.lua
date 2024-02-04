@@ -1,6 +1,6 @@
 return {
 
-  { "nvimdev/dashboard-nvim", enabled = false },
+  { "nvimdev/dashboard-nvim",   enabled = false },
   { "echasnovski/mini.starter", enabled = false },
   -- Customized dashboard with only features necessary
   {
@@ -13,24 +13,25 @@ return {
       local logo = [[
 ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗
 ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝
-██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  
-██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝
 ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
-                                                              
-                ███╗   ██╗██╗██╗  ██╗ ██████╗                 
-                ████╗  ██║██║██║ ██╔╝██╔═══██╗                
-                ██╔██╗ ██║██║█████╔╝ ██║   ██║                
-                ██║╚██╗██║██║██╔═██╗ ██║   ██║                
-                ██║ ╚████║██║██║  ██╗╚██████╔╝                
-                ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝                 
+
+                ███╗   ██╗██╗██╗  ██╗ ██████╗
+                ████╗  ██║██║██║ ██╔╝██╔═══██╗
+                ██╔██╗ ██║██║█████╔╝ ██║   ██║
+                ██║╚██╗██║██║██╔═██╗ ██║   ██║
+                ██║ ╚████║██║██║  ██╗╚██████╔╝
+                ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝
       ]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
       -- stylua: ignore
       dashboard.section.buttons.val = {
-        dashboard.button("r", " " .. " Recent files",    "<cmd> Telescope oldfiles <cr>"),
+        dashboard.button("r", " " .. " Recent files", "<cmd> Telescope oldfiles <cr>"),
         dashboard.button("s", " " .. " Restore Session", [[<cmd> lua require("persistence").load() <cr>]]),
+        dashboard.button("q", " " .. " Quit", "<cmd> qa <cr>"),
       }
       for _, button in ipairs(dashboard.section.buttons.val) do
         button.opts.hl = "AlphaButtons"
@@ -64,12 +65,12 @@ return {
           local stats = require("lazy").stats()
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
           dashboard.section.footer.val = "⚡ Neovim loaded "
-            .. stats.loaded
-            .. "/"
-            .. stats.count
-            .. " plugins in "
-            .. ms
-            .. "ms"
+              .. stats.loaded
+              .. "/"
+              .. stats.count
+              .. " plugins in "
+              .. ms
+              .. "ms"
           pcall(vim.cmd.AlphaRedraw)
         end,
       })
