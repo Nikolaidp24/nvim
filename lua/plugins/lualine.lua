@@ -1,7 +1,7 @@
 local Util = require("lazyvim.util")
 return {
   "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  -- event = "VeryLazy",
   init = function()
     vim.g.lualine_laststatus = vim.o.laststatus
     if vim.fn.argc(-1) > 0 then
@@ -127,7 +127,7 @@ return {
               return msg
             end,
             icon = "  LSP:",
-            color = { fg = "#FFFFFF", gui = "bold" },
+            color = { fg = "#FFFFFF" },
           },
         },
         lualine_x = {

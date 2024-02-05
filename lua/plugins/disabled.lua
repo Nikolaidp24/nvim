@@ -4,4 +4,7 @@ return {
   { "neo-tree.nvim", enabled = false },
   -- { "tokyonight.nvim", enabled = false },
   { "catppuccin",    enabled = false },
+  -- { "nvim-lint",     enabled = false }
+  -- { "edgy.nvim",     enabled = false },
+  { "flash.nvim",    enabled = false },
 }
