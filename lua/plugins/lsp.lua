@@ -10,8 +10,8 @@ return {
             },
             workspace = {
               library = {
-                [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-                [vim.fn.stdpath "config" .. "/lua"] = true,
+                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                [vim.fn.stdpath("config") .. "/lua"] = true,
               },
               checkThirdParty = false,
               maxPreload = 10000,
@@ -20,6 +20,50 @@ return {
           },
         },
       },
+      -- pyright = {
+      --   settings = {
+      --     python = {
+      --       analysis = {
+      --         typeCheckingMode = "basic",
+      --       },
+      --     },
+      --   },
+      -- },
+      -- pylsp = {
+      --   settings = {
+      --     pylsp = {
+      --       configurationSources = { "pycodestyle" },
+      --       plugins = {
+      --         mccabe = {
+      --           enabled = true,
+      --         },
+      --         pyflakes = {
+      --           enabled = true,
+      --         },
+      --         pycodestyle = {
+      --           enabled = true,
+      --           maxLineLength = 100,
+      --         },
+      --         flake8 = {
+      --           enabled = false,
+      --           maxLineLength = 100,
+      --         },
+      --         black = {
+      --           enabled = false,
+      --         },
+      --         isort = {
+      --           enabled = false,
+      --         },
+      --         autopep8 = {
+      --           enabled = true,
+      --         },
+      --         yapf = {
+      --           enabled = true,
+      --         },
+      --       },
+      --     },
+      --   },
+      -- },
     },
   },
 }

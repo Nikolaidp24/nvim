@@ -174,7 +174,7 @@ return {
           end,
         },
       },
-      extensions = { "nvim-tree", "lazy", "mason", "trouble", "fzf", "toggleterm" },
+      extensions = { "nvim-tree", "lazy", "mason", "trouble", "fzf", "toggleterm", "symbols-outline" },
     }
   end,
 }
