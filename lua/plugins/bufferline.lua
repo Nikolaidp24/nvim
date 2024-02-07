@@ -8,7 +8,7 @@ return {
   opts = {
     options = {
       mode = "buffers",
-      -- separator_style = { "", "" },
+      separator_style = { "", "" },
       show_buffer_close_icons = false,
       show_close_icon = false,
       diagnostics = "nvim_lsp",
