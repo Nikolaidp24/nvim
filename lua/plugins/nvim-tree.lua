@@ -7,7 +7,7 @@ return {
   opts = function()
     return {
       renderer = {
-        highlight_opened_files = "all"
+        highlight_opened_files = "all",
       },
       filters = {
         custom = {
@@ -20,6 +20,9 @@ return {
       update_focused_file = {
         enable = true,
         update_root = true,
+      },
+      git = {
+        timeout = 2000,
       },
     }
   end,

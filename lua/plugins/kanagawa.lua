@@ -20,9 +20,8 @@ return {
           local theme = colors.theme
           return {
             NormalFloat = { bg = "none" },
-            FloatBorder = { bg = "none" },
+            FloatBorder = { fg = colors.palette.lightBlue, bg = "none" },
             FloatTitle = { bg = "none" },
-
             -- Save an hlgroup with dark background and dimmed foreground
             -- so that you can use it where your still want darker windows.
             -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
@@ -36,11 +35,11 @@ return {
             --Borderless and transparent floating telescope windows
             TelescopeTitle = { fg = theme.ui.special, bg = "none" },
             TelescopePromptNormal = { bg = "none" },
-            TelescopePromptBorder = { fg = "#04D9FF", bg = "none" },
+            TelescopePromptBorder = { fg = colors.palette.carpYellow, bg = "none" },
             TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = "none" },
-            TelescopeResultsBorder = { fg = "#04D9FF", bg = "none" },
+            TelescopeResultsBorder = { fg = colors.palette.carpYellow, bg = "none" },
             TelescopePreviewNormal = { bg = "none" },
-            TelescopePreviewBorder = { bg = "none", fg = "#04D9FF" },
+            TelescopePreviewBorder = { bg = "none", fg = colors.palette.carpYellow },
           }
         end,
       }
