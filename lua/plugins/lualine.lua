@@ -28,44 +28,44 @@ return {
       yellow = "#FFDA7B",
       red = "#FF4A4A",
       fg = "#FFFFFF",
-      bg = "none",
+      bg = nil,
       inactive_bg = "#2c3043",
+      black = "#000000",
     }
 
     local my_lualine_theme = {
       normal = {
-        a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.blue, fg = colors.black, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = nil },
       },
       insert = {
-        a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.green, fg = colors.black, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = nil },
       },
       visual = {
-        a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.violet, fg = colors.black, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = nil },
       },
       command = {
-        a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = nil },
       },
       replace = {
-        a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.red, fg = colors.black, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = nil },
       },
       inactive = {
         a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
         b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-        c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+        c = { bg = colors.inactive_bg, fg = nil },
       },
     }
     -- configure lualine with modified theme
-    -- PERF: we don't need this lualine require madness 🤷
     local lualine_require = require("lualine_require")
     lualine_require.require = require
 

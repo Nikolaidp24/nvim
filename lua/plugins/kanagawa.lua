@@ -22,6 +22,9 @@ return {
             NormalFloat = { bg = "none" },
             FloatBorder = { fg = colors.palette.lightBlue, bg = "none" },
             FloatTitle = { bg = "none" },
+
+            -- Bufferline Configuratons
+            -- BufferLineBufferSelected = { fg = "#151515", bg = colors.palette.lightBlue },
             -- Save an hlgroup with dark background and dimmed foreground
             -- so that you can use it where your still want darker windows.
             -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
