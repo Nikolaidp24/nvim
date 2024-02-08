@@ -9,5 +9,8 @@ return {
         strategy = require("ts-rainbow").strategy.global,
       }
     end,
+    install = {
+      prefer_git = true,
+    },
   },
 }

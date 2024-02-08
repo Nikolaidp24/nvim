@@ -13,12 +13,6 @@ return {
       show_close_icon = false,
       diagnostics = "nvim_lsp",
       always_show_bufferline = true,
-      diagnostics_indicator = function(_, _, diag)
-        local icons = require("lazyvim.config").icons.diagnostics
-        local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-          .. (diag.warning and icons.Warn .. diag.warning or "")
-        return vim.trim(ret)
-      end,
       offsets = {
         {
           filetype = "NvimTree",
@@ -30,14 +24,14 @@ return {
       },
     },
   },
-  config = function(_, opts)
-    require("bufferline").setup(opts)
-    vim.api.nvim_create_autocmd("BufAdd", {
-      callback = function()
-        vim.schedule(function()
-          pcall(nvim_bufferline)
-        end)
-      end,
-    })
-  end,
+  -- config = function(_, opts)
+  --   require("bufferline").setup(opts)
+  --   vim.api.nvim_create_autocmd("BufAdd", {
+  --     callback = function()
+  --       vim.schedule(function()
+  --         pcall(nvim_bufferline)
+  --       end)
+  --     end,
+  --   })
+  -- end,
 }

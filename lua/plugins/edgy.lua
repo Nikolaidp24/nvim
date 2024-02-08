@@ -1,17 +1,6 @@
 return {
   "folke/edgy.nvim",
   event = "VeryLazy",
-  keys = {
-    {
-      "<leader>ue",
-      function()
-        require("edgy").toggle()
-      end,
-      desc = "Edgy Toggle",
-    },
-    -- stylua: ignore
-    { "<leader>uE", function() require("edgy").select() end, desc = "Edgy Select Window" },
-  },
   opts = function()
     local opts = {
       bottom = {
@@ -44,7 +33,7 @@ return {
             return vim.api.nvim_win_get_config(win).relative == ""
           end,
         },
-        { ft = "qf", title = "QuickFix" },
+        -- { ft = "qf", title = "QuickFix" },
         -- {
         --   ft = "help",
         --   size = { height = 20 },
@@ -53,7 +42,7 @@ return {
         --     return vim.bo[buf].buftype == "help"
         --   end,
         -- },
-        { title = "Neotest Output", ft = "neotest-output-panel", size = { height = 15 } },
+        -- { title = "Neotest Output", ft = "neotest-output-panel", size = { height = 15 } },
       },
       right = {
         {

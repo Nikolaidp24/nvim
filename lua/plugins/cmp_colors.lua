@@ -1,13 +1,12 @@
-local cmp = require("cmp")
 return {
   "hrsh7th/nvim-cmp",
-  cmp.setup({
+  opts = {
     window = {
-      completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
+      completion = { border = "single" },
+      documentation = { border = "single" },
     },
     performance = {
       max_view_entries = 10,
     },
-  }),
+  },
 }
