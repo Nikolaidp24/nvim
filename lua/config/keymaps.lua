@@ -21,3 +21,6 @@ keymap.set("n", "<C-Up>", "<C-w>k", opts)
 keymap.set("n", "<C-Down>", "<C-w>j", opts)
 -- Toggle NvimTree
 keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree", remap = true })
+keymap.set("n", "<Tab>", "<cmd>bnext<cr>")
+keymap.set("n", "<S-Tab>", "<cmd>bprev<cr>")
+keymap.set("n", "<leader>bo", "<cmd>BufDelOthers<cr>", { desc = "Delete other buffers" })

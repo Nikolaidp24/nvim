@@ -8,4 +8,5 @@ return {
   -- { "nvim-spectre", enabled = false },
   { "neodev.nvim", enabled = false },
   { "neoconf.nvim", enabled = false },
+  { "bufferline.nvim", enabled = false },
 }
