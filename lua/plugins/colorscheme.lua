@@ -49,6 +49,15 @@ return {
     end,
     -- vim.cmd("colorscheme kanagawa-wave"),
   },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      flavor = "mocha",
+      transparent_background = true,
+    },
+  },
 }
 -- return {
 --   "folke/tokyonight.nvim",

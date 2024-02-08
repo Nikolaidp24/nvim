@@ -74,7 +74,8 @@ return {
     return {
       options = {
         theme = my_lualine_theme,
-        component_separators = "",
+        component_separators = { "", "" },
+        section_separators = { left = "", right = "" },
         globalstatus = true,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },

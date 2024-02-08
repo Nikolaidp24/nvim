@@ -41,7 +41,7 @@ return {
       left_half_circle = {
         text = "",
         fg = function(buffer)
-          return buffer.is_focused and "#8992a7" or get_hex("ColorColumn", "bg")
+          return buffer.is_focused and "#957FB8" or get_hex("ColorColumn", "bg")
         end,
         bg = get_hex("Normal", "bg"),
         truncation = { priority = 1 },
@@ -50,7 +50,7 @@ return {
       right_half_circle = {
         text = "",
         fg = function(buffer)
-          return buffer.is_focused and "#8992a7" or get_hex("ColorColumn", "bg")
+          return buffer.is_focused and "#957FB8" or get_hex("ColorColumn", "bg")
         end,
         bg = get_hex("Normal", "bg"),
         truncation = { priority = 1 },
@@ -206,7 +206,7 @@ return {
         new_buffers_position = "next",
       },
       rendering = {
-        max_buffer_width = 23,
+        max_buffer_width = 30,
       },
 
       default_hl = {
@@ -214,7 +214,7 @@ return {
           return buffer.is_focused and "#DCD7BA" or get_hex("Comment", "fg")
         end,
         bg = function(buffer)
-          return buffer.is_focused and "#8992a7" or get_hex("ColorColumn", "bg")
+          return buffer.is_focused and "#957FB8" or get_hex("ColorColumn", "bg")
         end,
       },
 
