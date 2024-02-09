@@ -139,23 +139,21 @@ return {
         },
       },
 
-      -- diagnostics = {
-      --   text = function(buffer)
-      --     return
-      --       (buffer.diagnostics.errors ~= 0 and '  ' .. buffer.diagnostics.errors)
-      --       or (buffer.diagnostics.warnings ~= 0 and '  ' .. buffer.diagnostics.warnings)
-      --       or ''
-      --   end,
-      --   hl = {
-      --     fg = function(buffer)
-      --       return
-      --         (buffer.diagnostics.errors ~= 0 and errors_fg)
-      --         or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
-      --         or nil
-      --     end,
-      --   },
-      --   truncation = { priority = 1 },
-      -- },
+      diagnostics = {
+        text = function(buffer)
+          return (buffer.diagnostics.errors ~= 0 and "  " .. buffer.diagnostics.errors)
+            or (buffer.diagnostics.warnings ~= 0 and "  " .. buffer.diagnostics.warnings)
+            or ""
+        end,
+        hl = {
+          fg = function(buffer)
+            return (buffer.diagnostics.errors ~= 0 and errors_fg)
+              or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
+              or nil
+          end,
+        },
+        truncation = { priority = 1 },
+      },
 
       close_or_unsaved = {
         text = function(buffer)
@@ -230,7 +228,6 @@ return {
           },
         },
       },
-
       components = {
         components.separator,
         components.left_half_circle,
@@ -240,7 +237,7 @@ return {
         components.unique_prefix,
         components.filename_root,
         components.filename_extension,
-        -- components.diagnostics,
+        components.diagnostics,
         components.space,
         right_padding,
         components.close_or_unsaved,
