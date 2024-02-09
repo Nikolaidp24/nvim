@@ -9,4 +9,5 @@ return {
   { "neodev.nvim", enabled = false },
   { "neoconf.nvim", enabled = false },
   { "bufferline.nvim", enabled = false },
+  { "kanagawa.nvim", enabled = false },
 }

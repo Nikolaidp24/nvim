@@ -56,6 +56,11 @@ return {
     opts = {
       flavor = "mocha",
       transparent_background = true,
+      -- colors = {
+      --   custom_highlights = {
+      --     Underline = { fg = "#f5e0dc", bg = "#f5e0dc" },
+      --   },
+      -- },
     },
   },
 }
