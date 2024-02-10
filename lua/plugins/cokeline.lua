@@ -201,7 +201,7 @@ return {
         -- filter_valid = function(buffer) return buffer.type ~= 'terminal' end,
         -- filter_visible = function(buffer) return buffer.type ~= 'terminal' end,
         focus_on_delete = "next",
-        new_buffers_position = "next",
+        new_buffers_position = "number",
       },
       rendering = {
         max_buffer_width = 30,

@@ -58,10 +58,18 @@ return {
       transparent_background = true,
       -- colors = {
       --   custom_highlights = {
-      --     Underline = { fg = "#f5e0dc", bg = "#f5e0dc" },
+      --     illuminatedWord = { bg = "#d7005f" },
       --   },
       -- },
     },
+    -- highlight_overrides = {
+    --   all = function(colors)
+    --     return {
+    --       IlluminatedWordRead = { bg = "#d7005f" },
+    --       Keyword = { gui = "italic" },
+    --     }
+    --   end,
+    -- },
   },
 }
 -- return {
