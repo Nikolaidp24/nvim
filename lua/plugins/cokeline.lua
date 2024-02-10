@@ -41,7 +41,7 @@ return {
       left_half_circle = {
         text = "",
         fg = function(buffer)
-          return buffer.is_focused and "#957FB8" or get_hex("ColorColumn", "bg")
+          return buffer.is_focused and "#585B70" or get_hex("ColorColumn", "bg")
         end,
         bg = get_hex("Normal", "bg"),
         truncation = { priority = 1 },
@@ -50,7 +50,7 @@ return {
       right_half_circle = {
         text = "",
         fg = function(buffer)
-          return buffer.is_focused and "#957FB8" or get_hex("ColorColumn", "bg")
+          return buffer.is_focused and "#585B70" or get_hex("ColorColumn", "bg")
         end,
         bg = get_hex("Normal", "bg"),
         truncation = { priority = 1 },
@@ -77,8 +77,8 @@ return {
           return buffer.index .. ": "
         end,
         fg = function(buffer)
-          return (buffer.diagnostics.errors ~= 0 and errors_fg)
-            or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
+          return (buffer.diagnostics.errors ~= 0 and buffer.is_focused and errors_fg)
+            or (buffer.diagnostics.warnings ~= 0 and buffer.is_focused and warnings_fg)
             or nil
         end,
         truncation = { priority = 1 },
@@ -101,8 +101,8 @@ return {
           return vim.fn.fnamemodify(buffer.filename, ":r")
         end,
         fg = function(buffer)
-          return (buffer.diagnostics.errors ~= 0 and errors_fg)
-            or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
+          return (buffer.diagnostics.errors ~= 0 and buffer.is_focused and errors_fg)
+            or (buffer.diagnostics.warnings ~= 0 and buffer.is_focused and warnings_fg)
             or nil
         end,
         style = function(buffer)
@@ -123,8 +123,8 @@ return {
           return ext ~= "" and "." .. ext or ""
         end,
         fg = function(buffer)
-          return (buffer.diagnostics.errors ~= 0 and errors_fg)
-            or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
+          return (buffer.diagnostics.errors ~= 0 and buffer.is_focused and errors_fg)
+            or (buffer.diagnostics.warnings ~= 0 and buffer.is_focused and warnings_fg)
             or nil
         end,
         style = function(buffer)
@@ -145,13 +145,13 @@ return {
             or (buffer.diagnostics.warnings ~= 0 and "  " .. buffer.diagnostics.warnings)
             or ""
         end,
-        hl = {
-          fg = function(buffer)
-            return (buffer.diagnostics.errors ~= 0 and errors_fg)
-              or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
-              or nil
-          end,
-        },
+        -- hl = {
+        fg = function(buffer)
+          return (buffer.diagnostics.errors ~= 0 and buffer.is_focused and errors_fg)
+            or (buffer.diagnostics.warnings ~= 0 and buffer.is_focused and warnings_fg)
+            or get_hex("Comment", "fg")
+        end,
+        -- },
         truncation = { priority = 1 },
       },
 
@@ -209,10 +209,10 @@ return {
 
       default_hl = {
         fg = function(buffer)
-          return buffer.is_focused and "#DCD7BA" or get_hex("Comment", "fg")
+          return buffer.is_focused and "#CDD6F4" or get_hex("Comment", "fg")
         end,
         bg = function(buffer)
-          return buffer.is_focused and "#957FB8" or get_hex("ColorColumn", "bg")
+          return buffer.is_focused and "#585B70" or get_hex("ColorColumn", "bg")
         end,
       },
 

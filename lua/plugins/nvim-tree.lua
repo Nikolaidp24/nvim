@@ -20,5 +20,10 @@ return {
     git = {
       timeout = 2000,
     },
+    -- view = {
+    --   float = {
+    --     enable = true,
+    --   },
+    -- },
   },
 }
