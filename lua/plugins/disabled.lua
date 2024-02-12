@@ -10,4 +10,5 @@ return {
   { "neoconf.nvim", enabled = false },
   { "bufferline.nvim", enabled = false },
   { "kanagawa.nvim", enabled = false },
+  { "mini.ai", enabled = false },
 }

@@ -1,5 +1,6 @@
 return {
   "willothy/nvim-cokeline",
+  event = "VeryLazy",
   opts = function()
     local get_hex = function(hlgroup_name, attr)
       local hlgroup_ID = vim.fn.synIDtrans(vim.fn.hlID(hlgroup_name))

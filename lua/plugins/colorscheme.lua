@@ -56,38 +56,35 @@ return {
     opts = {
       flavor = "mocha",
       transparent_background = true,
-      -- colors = {
-      --   custom_highlights = {
-      --     illuminatedWord = { bg = "#d7005f" },
-      --   },
+      -- custom_highlights = {
+      --   illuminatedWord = { bg = "#d7005f" },
       -- },
+      styles = {
+        loop = { "bold" },
+        functions = { "italic" },
+        keywords = { "italic", "bold" },
+        booleans = { "bold" },
+        types = { "bold" },
+      },
     },
-    -- highlight_overrides = {
-    --   all = function(colors)
-    --     return {
-    --       IlluminatedWordRead = { bg = "#d7005f" },
-    --       Keyword = { gui = "italic" },
-    --     }
-    --   end,
-    -- },
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    opts = function()
+      return {
+        on_highlights = function(hl, colors)
+          hl.CursorLineNr = { fg = colors.orange, bold = true }
+          hl.LineNr = { fg = "#888888", bg = "none", bold = false }
+        end,
+        transparent = true,
+        style = "moon",
+        styles = {
+          floats = "transparent",
+          keywords = { bold = true },
+          sidebars = "transparent",
+        },
+      }
+    end,
   },
 }
--- return {
---   "folke/tokyonight.nvim",
---   lazy = true,
---   opts = function()
---     return {
---       on_highlights = function(hl, colors)
---         hl.CursorLineNr = { fg = colors.orange, bold = true }
---         hl.LineNr = { fg = "#888888", bg = "none", bold = false }
---       end,
---       transparent = true,
---       style = "moon",
---       styles = {
---         floats = "transparent",
---         keywords = { bold = true },
---         sidebars = "transparent",
---       },
---     }
---   end,
--- }
