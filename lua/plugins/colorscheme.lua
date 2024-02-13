@@ -65,6 +65,7 @@ return {
         keywords = { "italic", "bold" },
         booleans = { "bold" },
         types = { "bold" },
+        strings = { "italic" },
       },
     },
   },
