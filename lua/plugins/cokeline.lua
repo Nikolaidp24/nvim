@@ -90,7 +90,6 @@ return {
           return buffer.unique_prefix
         end,
         fg = comments_fg,
-        style = "italic",
         truncation = {
           priority = 4,
           direction = "left",
@@ -106,11 +105,11 @@ return {
             or (buffer.diagnostics.warnings ~= 0 and buffer.is_focused and warnings_fg)
             or nil
         end,
-        style = function(buffer)
-          return ((buffer.is_focused and buffer.diagnostics.errors ~= 0) and "bold,underline")
-            or (buffer.is_focused and "bold")
-            or (buffer.diagnostics.errors ~= 0 and "underline")
-            or nil
+        undercurl = function(buffer)
+          return buffer.is_focused and buffer.diagnostics.errors ~= 0
+        end,
+        italic = function(buffer)
+          return buffer.is_focused
         end,
         truncation = {
           priority = 3,
@@ -128,11 +127,11 @@ return {
             or (buffer.diagnostics.warnings ~= 0 and buffer.is_focused and warnings_fg)
             or nil
         end,
-        style = function(buffer)
-          return ((buffer.is_focused and buffer.diagnostics.errors ~= 0) and "bold,underline")
-            or (buffer.is_focused and "bold")
-            or (buffer.diagnostics.errors ~= 0 and "underline")
-            or nil
+        undercurl = function(buffer)
+          return buffer.is_focused and buffer.diagnostics.errors ~= 0
+        end,
+        italic = function(buffer)
+          return buffer.is_focused
         end,
         truncation = {
           priority = 2,
