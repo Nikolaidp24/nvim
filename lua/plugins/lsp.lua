@@ -21,26 +21,38 @@ return {
           },
         },
       },
-      -- pyright = {
+      pyright = {
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "basic",
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+              diagnosticMode = "openFilesOnly",
+            },
+          },
+          pyright = {
+            disableOrganizeImports = true,
+          },
+        },
+      },
+      -- pylsp = {
       --   settings = {
-      --     python = {
-      --       analysis = {
-      --         typeCheckingMode = "basic",
+      --     pylsp = {
+      --       plugins = {
+      --         pycodestyle = {
+      --           enabled = false,
+      --         },
+      --         pyflakes = {
+      --           enabled = false,
+      --         },
+      --         mccabe = {
+      --           enabled = false,
+      --         },
       --       },
       --     },
       --   },
       -- },
-      pylsp = {
-        settings = {
-          pylsp = {
-            plugins = {
-              pycodestyle = {
-                maxLineLength = 100,
-              },
-            },
-          },
-        },
-      },
     },
   },
 }
