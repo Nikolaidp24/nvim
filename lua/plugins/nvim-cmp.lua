@@ -31,7 +31,7 @@ return {
       documentation = { border = "single" },
     },
     performance = {
-      max_view_entries = 10,
+      max_view_entries = 100,
     },
   },
 }

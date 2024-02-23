@@ -127,8 +127,8 @@ return {
               end
               return msg
             end,
-            icon = "  LSP:",
-            color = { fg = "#FFFFFF" },
+            icon = " ",
+            color = { fg = "#CDD6F4" },
           },
         },
         lualine_x = {
