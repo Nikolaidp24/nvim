@@ -44,14 +44,6 @@ return {
         -- },
         -- { title = "Neotest Output", ft = "neotest-output-panel", size = { height = 15 } },
       },
-      right = {
-        {
-          title = "Symbols Outline",
-          ft = "Outline",
-          pinned = true,
-          open = "SymbolsOutline",
-        },
-      },
       keys = {},
     }
     return opts
