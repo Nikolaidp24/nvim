@@ -9,5 +9,7 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTre
 keymap.set("n", "<Tab>", "<cmd>bnext<cr>")
 keymap.set("n", "<S-Tab>", "<cmd>bprev<cr>")
 keymap.set("n", "<leader>bo", "<cmd>BufDelOthers<cr>", { desc = "Delete other buffers" })
+keymap.del("n", "H")
+keymap.del("n", "L")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
