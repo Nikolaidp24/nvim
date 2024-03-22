@@ -216,18 +216,18 @@ return {
         end,
       },
 
-      sidebar = {
-        filetype = "NvimTree",
-        components = {
-          {
-            -- text = "",
-            text = "         File Explorer",
-            fg = get_hex("Title", "fg"),
-            bg = get_hex("NvimTreeNormal", "bg"),
-            style = "bold",
-          },
-        },
-      },
+      -- sidebar = {
+      --   filetype = "NvimTree",
+      --   components = {
+      --     {
+      --       -- text = "",
+      --       text = "         File Explorer",
+      --       fg = get_hex("Title", "fg"),
+      --       bg = get_hex("NvimTreeNormal", "bg"),
+      --       style = "bold",
+      --     },
+      --   },
+      -- },
       components = {
         components.separator,
         components.left_half_circle,
