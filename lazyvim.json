@@ -1,13 +1,11 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.copilot",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.omnisharp",
     "lazyvim.plugins.extras.ui.alpha",
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.ui.mini-animate",
-    "lazyvim.plugins.extras.util.mini-hipatterns",
-    "lazyvim.plugins.extras.editor.outline"
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
     "NEWS.md": "3314"
