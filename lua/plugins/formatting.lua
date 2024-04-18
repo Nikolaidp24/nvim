@@ -4,6 +4,7 @@ return {
   opts = {
     notify_on_error = false,
     formatters_by_ft = {
+      cpp = { "clang-format" },
       lua = { "stylua" },
       python = { "black", "isort" },
       markdown = { { "prettierd", "prettier" } },
