@@ -84,7 +84,7 @@ return {
         lualine_b = {},
 
         lualine_c = {
-          Util.lualine.root_dir(),
+          -- Util.lualine.root_dir(),
           {
             "filetype",
             icon_only = true,
