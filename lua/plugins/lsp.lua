@@ -28,7 +28,7 @@ return {
               typeCheckingMode = "off",
               autoSearchPaths = true,
               useLibraryCodeForTypes = true,
-              diagnosticMode = "openFilesOnly",
+              diagnosticMode = "workspace",
             },
           },
         },
