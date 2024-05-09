@@ -12,6 +12,8 @@ return {
       "prettierd",
       "pyright",
       "shellcheck",
+      "markdownlint",
+      "rust-analyzer",
     },
   },
 }
