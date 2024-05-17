@@ -11,4 +11,5 @@ return {
   { "bufferline.nvim", enabled = false },
   { "kanagawa.nvim", enabled = false },
   { "mini.ai", enabled = false },
+  -- { "indent-blankline.nvim", enabled = false },
 }

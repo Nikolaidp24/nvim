@@ -54,7 +54,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavor = "mocha",
+      -- flavor = "latte",
       transparent_background = true,
       -- custom_highlights = {
       --   illuminatedWord = { bg = "#d7005f" },
@@ -73,7 +73,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-mocha",
     },
   },
 
