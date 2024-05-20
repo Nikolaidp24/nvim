@@ -1,6 +1,7 @@
 return {
   "nvim-tree/nvim-tree.lua",
-  event = "VeryLazy",
+  cmd = "NvimTreeToggle",
+  -- event = "VeryLazy",
   opts = {
     renderer = {
       highlight_opened_files = "all",
