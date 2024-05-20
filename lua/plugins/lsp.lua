@@ -51,6 +51,9 @@ return {
       --   },
       -- },
       rust_analyzer = {},
+      clangd = {
+        mason = false,
+      },
     },
   },
 }
