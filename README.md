@@ -23,4 +23,10 @@ This is my personal configuration based on the LazyVim Neovim distro, I have mod
 
 Other than the above mentioned three main subjects, there are still a bunch of minor tweaks here and there that you might find interesting.
 
+- [tabout](https://github.com/abecodes/tabout.nvim)
+
+  > Very cool plugins that enhances your experience with tabbing out of stuff like `()`, `[]`, and so on, highly configurable as well.
+
+- And some more minor tweaks here and there.
+
 Let me know if it works for you well if you've decided to give my config a try.
