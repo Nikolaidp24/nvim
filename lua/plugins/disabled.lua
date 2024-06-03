@@ -12,4 +12,6 @@ return {
   { "kanagawa.nvim", enabled = false },
   { "mini.ai", enabled = false },
   -- { "indent-blankline.nvim", enabled = false },
+  { "lazydev.nvim", enabled = false },
+  { "luvit-meta", enabled = false },
 }
