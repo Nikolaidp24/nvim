@@ -5,8 +5,8 @@ return {
       -- python = { "ruff" },
       sh = { "shellcheck" },
       markdown = { "markdownlint" },
-      typescript = { "eslint_d" },
-      javascript = { "eslint_d" },
+      -- typescript = { "eslint_d" },
+      -- javascript = { "eslint_d" },
     },
   },
 }
