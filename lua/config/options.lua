@@ -5,3 +5,4 @@ vim.opt.autoindent = true
 vim.opt.smarttab = true
 vim.opt.title = true
 vim.opt.scrolloff = 8
+vim.opt.tabstop = 4
