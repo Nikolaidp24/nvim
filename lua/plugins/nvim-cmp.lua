@@ -1,5 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
+  event = "VeryLazy",
   dependencies = {
     "hrsh7th/cmp-cmdline",
     config = function()
