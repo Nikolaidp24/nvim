@@ -114,48 +114,19 @@ return {
           {
             function()
               local msg = "No Active LSP"
-              local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-              local clients = vim.lsp.get_active_clients()
+              local bufnumber = vim.api.nvim_get_current_buf()
+              local clients = vim.lsp.get_clients({ bufnr = bufnumber })
               if next(clients) == nil then
                 return msg
+              else
+                return clients[1].name
               end
-              for _, client in ipairs(clients) do
-                local filetypes = client.config.filetypes
-                if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                  return client.name
-                end
-              end
-              return msg
             end,
             icon = " ",
             color = { fg = "#CDD6F4" },
           },
         },
         lualine_x = {
-          {
-            function()
-              local icon = require("lazyvim.config").icons.kinds.Copilot
-              local status = require("copilot.api").status.data
-              return icon .. (status.message or "")
-            end,
-            cond = function()
-              if not package.loaded["copilot"] then
-                return
-              end
-              local ok, clients = pcall(require("lazyvim.util").lsp.get_clients, { name = "copilot", bufnr = 0 })
-              if not ok then
-                return false
-              end
-              return ok and #clients > 0
-            end,
-            color = function()
-              if not package.loaded["copilot"] then
-                return
-              end
-              local status = require("copilot.api").status.data
-              return colors[status.status] or colors[""]
-            end,
-          },
           "encoding",
           "branch",
           {

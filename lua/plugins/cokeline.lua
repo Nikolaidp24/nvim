@@ -172,6 +172,7 @@ return {
       for _, component in pairs(components) do
         used_space = used_space
           + vim.fn.strwidth(
+            ---@diagnostic disable-next-line: param-type-mismatch
             (type(component.text) == "string" and component.text)
               or (type(component.text) == "function" and component.text(buffer))
           )
