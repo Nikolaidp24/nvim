@@ -9,8 +9,17 @@ return {
           end,
         },
       },
+      menu = {
+        border = "rounded",
+        winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
+      },
+      documentation = {
+        window = {
+          border = "rounded",
+          winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
+        },
+      },
     },
-
     sources = {
       cmdline = function()
         local type = vim.fn.getcmdtype()

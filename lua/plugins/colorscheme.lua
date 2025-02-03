@@ -54,11 +54,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      -- flavor = "latte",
       transparent_background = true,
-      -- custom_highlights = {
-      --   illuminatedWord = { bg = "#d7005f" },
-      -- },
       styles = {
         loop = { "bold" },
         functions = { "italic" },
