@@ -24,7 +24,7 @@ return {
 
       dashboard.section.header.val = vim.split(logo, "\n")
       dashboard.section.buttons.val = {
-        dashboard.button("r", " " .. " Recent files", "<cmd> Telescope oldfiles <cr>"),
+        dashboard.button("r", " " .. " Recent files", "<cmd> FzfLua oldfiles <cr>"),
         dashboard.button("s", " " .. " Restore Session", [[<cmd> lua require("persistence").load() <cr>]]),
         dashboard.button("q", " " .. " Quit", "<cmd> qa <cr>"),
       }

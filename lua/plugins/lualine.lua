@@ -1,4 +1,4 @@
-local Util = require("lazyvim.util")
+local Snacks = require("snacks.util")
 return {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
@@ -18,10 +18,10 @@ return {
     local icons = require("lazyvim.config").icons
     vim.o.laststatus = vim.g.lualine_laststatus
     local colors = {
-      [""] = Util.ui.fg("Special"),
-      ["Normal"] = Util.ui.fg("Special"),
-      ["Warning"] = Util.ui.fg("DiagnosticError"),
-      ["InProgress"] = Util.ui.fg("DiagnosticWarn"),
+      [""] = Snacks.color("Special"),
+      ["Normal"] = Snacks.color("Special"),
+      ["Warning"] = Snacks.color("DiagnosticError"),
+      ["InProgress"] = Snacks.color("DiagnosticWarn"),
       blue = "#65D1FF",
       green = "#3EFFDC",
       violet = "#FF61EF",
